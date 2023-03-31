@@ -1,0 +1,536 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+/* toggle button begins */
+
+
+
+
+
+
+/* toggle button ends */
+
+.topFrame{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    padding-top: 12px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+}
+.time{
+    
+    color: white;
+    font-size: 12px;
+}
+.topFrame img{
+    width: 30px;
+    margin-left: -15px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    
+}
+.topFrame img:hover{
+    scale: 1.05;
+}
+.battery{
+    border-radius: 3px;
+    width: 25px;
+    height: 10px;
+    background-color: white;
+    
+}
+.innerBattery{
+    border-radius: 3px;
+    width: 25px;
+    height: 10px;
+    outline-offset: -2px;
+    outline: 1px solid rgb(154, 154, 154);
+}
+.container{
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: repeating-linear-gradient(to top right,rgb(134, 124, 158), rgb(191, 191, 191)); 
+
+}
+.calculatorFrame{
+    position: relative;
+    width: 250px;
+    height: 450px;
+    border-radius: 20px;
+    
+    background-image: repeating-linear-gradient(to top right,rgb(0, 0, 0), rgb(55, 55, 55)); 
+    box-shadow: 7px 9px 12px black;
+}
+.calculatorDisplay{
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+    width: 250px;
+    height: 110px; 
+    display: flex;
+    flex-direction: column;
+    /* text-align: right; */
+    justify-content: end;
+    align-items: end;
+    /* position: fixed;
+    top:0; */
+
+}
+.answerFrame{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.ans{
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(229, 229, 229);
+    overflow:hidden ;
+    width: 100%;
+    background: none;
+    outline: none;
+    border: none;
+    text-align: right;
+}
+.equalSymbol{
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 20px;
+    font-size: 33px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: white;
+    text-align: left;
+
+}
+.inputsFrame{
+    
+    display: flex;
+    justify-content: right;
+    margin-right: 10px;
+    width: 100%;
+    
+
+}
+.input{
+    text-align: end;
+    font-size: 29px;
+    color: rgba(252, 252, 252, 0.903);
+    font-weight: 500;
+    margin-right: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+
+    border: none;
+    outline:none;
+    resize:none;
+    background: none;
+    padding-left: 20px;
+    cursor: default;
+    overflow-y: scroll;
+}
+
+/* scroll begins */
+
+
+.input::-webkit-scrollbar {
+    width:5px;
+    
+    
+}
+.input::-webkit-scrollbar-track {
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius:5px;
+
+}
+.input::-webkit-scrollbar-thumb {
+    border-radius:5px;
+    -webkit-box-shadow: inset 0 0 6px red; 
+}
+
+/* scroll ends */
+
+/* .input{
+    padding-right: 20px;
+    font-size: 26px;
+    font-weight: 500;
+    padding-bottom: 5px;
+    color: rgba(250, 250, 250, 0.903);
+    text-align: right;
+} */
+.keysFrame{
+    width: 250px;
+    height: 270px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 0px 2px 3px black;
+    padding-top: 10px;
+    transition: 0.5s;
+}
+
+.row1,.row2,.row3,.row4,.row5{
+    width: 250px;
+    height: 45px;
+    margin-top: 5px;
+    /* background-color: blue; */
+    /* margin-bottom: 5px; */
+    padding-left:15px;
+    padding-right: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.acKey{
+    width:45px;
+    height: 45px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 50%;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.backKey{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    padding-right: 3px;
+    background-color: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.backKey img{
+    width: 28px;
+}
+.percentageKey{
+    width:45px;
+    height: 45px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.divideKey{
+    width:45px;
+    height: 45px;
+    margin-left: 0px;
+    background-image: repeating-linear-gradient(to top right,rgb(255,156,13), rgb(255, 173, 40)); 
+    border-radius:50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+.sevenKey,.eightKey,.nineKey,.multiplyKey,.fourKey,.fiveKey,.sixkey,.minusKey,.oneKey,.twoKey,.threeKey,.plusKey,.dotKey,.zeroKey,.doubleZeroKey,.equalKey{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    color:white;
+    background-image: repeating-linear-gradient(to top right,rgb(106, 106, 106), rgb(107, 107, 107)); 
+    margin-left: 6px;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}   
+
+.sevenKey:hover,.eightKey:hover,.nineKey:hover,.multiplyKey:hover,.fourKey:hover,.fiveKey:hover,.sixkey:hover,.oneKey:hover,.twoKey:hover,.threeKey:hover,.zeroKey:hover,.doubleZeroKey:hover,.dotKey:hover{
+    background-image: repeating-linear-gradient(to top right,rgb(74, 74, 74), rgb(107, 107, 107)); 
+
+}
+
+.row2 ,.row3, .row4 ,.row5{
+    /* padding-left: 23px; */
+
+}
+.multiplyKey,.minusKey,.plusKey{
+    font-size: 23px;
+    font-weight: 400;
+    background-image: repeating-linear-gradient(to top right,rgb(255,156,13), rgb(255, 173, 40)); 
+    color: white;
+}
+.divideKey:hover, .multiplyKey:hover,.minusKey:hover,.plusKey:hover{
+    background-image: repeating-linear-gradient(to top right,rgb(239, 143, 9), rgb(255, 158, 3));   
+  }
+
+
+.minusKey{
+        font-weight: 600;
+}
+.plusKey{
+    font-size: 23px;
+    font-weight: 600;
+
+}
+.equalKey{
+    border-radius: 50%;
+    background-image: repeating-linear-gradient(to top right,rgb(255,156,13), rgb(255, 173, 40));     color: white;
+    font-weight: 600;
+    transition: 2s;
+    }
+    .equalKey:hover{
+        background-image: repeating-linear-gradient(to top right,rgb(239, 143, 9), rgb(255, 158, 3));     }
+.row5{
+    margin-top: 5px;
+}
+
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright label{
+    font-size: 10px;
+    font-family:cursive ;
+    color: rgb(95, 95, 95);
+}
+
+.history p{
+   
+    margin-top: 5px;
+    font-size: 24px;
+    text-shadow: 0px 0px 3px white;
+}
+
+/* scroll begins */
+
+
+.historyFrame::-webkit-scrollbar {
+    width:5px;
+    
+}
+.historyFrame::-webkit-scrollbar-track {
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius:5px;
+
+}
+.historyFrame::-webkit-scrollbar-thumb {
+    border-radius:5px;
+    -webkit-box-shadow: inset 0 0 6px red; 
+}
+
+/* scroll ends */
+
+
+/* history frame begins */
+.historyFrame{
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    /* display: none; */
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    overflow-y: scroll;
+    height: 0;
+    margin-top: 10px;
+    background-color: rgba(110, 110, 110, 0.535);
+ 
+
+}
+
+
+.historyFrame .close{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.historyFrame .close p{
+    visibility: hidden;
+}
+.close img{
+    cursor: pointer;
+    width:40px;
+    float: right;
+    transition: 0.5s ease;
+}
+.close img:hover{
+    scale: 1.02;
+}
+/* .historyFrame .clear{
+
+    margin: 0 auto;
+    position: fixed;
+    top: 10px;
+
+} */
+.historyFrame .close button{
+    text-align: center;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    transition: scale 0.3s ease;
+}
+.historyFrame .close button:hover{
+    scale: 1.01;
+
+}
+.hist{
+    margin-top: 10px;
+    width: 100%;
+
+}
+
+.notesFrame{
+    margin-left: 10px;
+    text-align: center;
+}
+.notesFrame .ques{
+    color: white;
+    margin: 0 5px;
+    font-size:20px ;
+    text-shadow: 0px 0px 5px blue;
+}
+.notesFrame .ans{
+    text-align: center;
+    color: white;
+    font-size:23px ;
+    border-bottom: 1px solid rgb(197, 197, 197);
+    text-shadow: 0px 0px 5px blue;
+    padding-bottom: 6px;
+}
+
+/* history frame ends */
+/* responsive */
+
+@media (max-width:590px) {
+    .historyFrame{
+        padding-top: 10px;
+        margin-top: 0;
+    }
+    .historyFrame .close{
+        padding-bottom: 10px;
+    }
+    .historyFrame .close button{
+        font-size: 20px;
+        padding: 6px 10px;
+       
+    }
+    .close img{
+     
+        width:50px;
+ 
+    }
+
+    .topFrame img{
+        margin-left: -45px;
+        width: 35px;
+    }
+    
+  
+   .container{
+    display: block;
+    height: 100vh;
+    width: 100%;
+   }
+   
+   .topFrame{
+    margin-left: 20px;
+
+    margin-right: 20px;
+   }
+    .calculatorFrame{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+       
+    }
+
+    .inputsFrame{
+        margin-top: 20px;
+    }
+  
+    .calculatorDisplay{
+        width: 100%;
+        /* height: 24vh; */
+        height: calc(100vh - 538px );
+        align-items: end;
+    }
+
+    .inputsFrame{
+      
+    }
+    
+    .keysFrame{
+    padding-top: 20px;
+    position: fixed;
+    bottom: 0;
+    height: 395px;
+    width: 100%;
+        
+    }
+    .sevenKey,.eightKey,.nineKey,.multiplyKey,.fourKey,.fiveKey,.sixkey,.minusKey,.oneKey,.twoKey,.threeKey,.plusKey,.dotKey,.zeroKey,.doubleZeroKey,.equalKey,.acKey,.backKey,.percentageKey,.divideKey{
+        width: 60px;
+        height: 60px;
+    }
+    .row1,.row2,.row3,.row4,.row5{
+        width: 100%;
+        height: 50px;
+        margin-top: 18px;
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    .acKey ,.backKey ,.percentageKey {
+        /* background-color: transparent; */
+    }
+    .input{
+        width: 100%;
+        height: 100%;
+    }
+    .sevenKey,.eightKey,.nineKey,.fourKey,.fiveKey,.sixkey,.minusKey,.oneKey,.twoKey,.threeKey,.plusKey,.dotKey,.zeroKey,.doubleZeroKey,.equalKey,.percentageKey,.divideKey,.multiplyKey,.plusKey,.minusKey{
+        font-size: 30px;
+    }
+    .acKey ,.backKey{
+        font-size: 25px;
+    }
+    .time{
+        font-size: 15px;
+    }
+    .backKey img{
+        width: 40px;
+    }
+    .copyright{
+        margin-top: 12px;
+
+    }
+   
+ }
+

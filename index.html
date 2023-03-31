@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculatorFrame">
+         
+            <div class="topFrame">
+                <div class="time" id="time">2:30 </div>
+                <img src="history-.svg" class="historyBtn" alt="history">
+                <div class="battery">
+                    <div class="innerBattery"></div>
+                    
+
+                </div>
+            </div>
+            
+
+            <div class="calculatorDisplay">
+      
+                <div class="displayIn">
+                    <div class="inputsFrame">
+                        <input  id="result" class="input" readonly="readonly"></input>
+                    </div>
+                    
+                <div class="answerFrame">
+                    <label for="" class="equalSymbol" id="equalSymbol" hidden>=</label>
+                    <input id="ans" class="ans" readonly="readonly"></inp>
+                </div>  
+                
+                
+                </div>
+                
+            </div>
+            <div class="keysFrame">
+                   <div class="keys">
+                    <div class="row1">
+                        <div class="acKey" onclick="allClear()">C</div>
+                        <div class="backKey" onclick="back()"><img src="back.svg" alt="back icon"></div>
+                        <div class="percentageKey" onclick="display('%')">%</div>
+                        <div class="divideKey" onclick="display('/')">/</div>
+                    </div>
+                    <div class="row2">
+                        <div class="sevenKey" onclick="display('7') ">7</div>
+                        <div class="eightKey" onclick="display('8')">8</div>
+                        <div class="nineKey" onclick="display('9')">9</div>
+                        <div class="multiplyKey" onclick="display('*')">x</div>
+                    </div>
+                    <div class="row3">
+                        <div class="fourKey" onclick="display('4')">4</div>
+                        <div class="fiveKey" onclick="display('5')">5</div>
+                        <div class="sixkey" onclick="display('6')">6</div>
+                        <div class="minusKey" onclick="display('-')">-</div>
+                    </div>
+                    <div class="row4">
+                        <div class="oneKey" onclick="display('1')">1</div>
+                        <div class="twoKey" onclick="display('2')">2</div>
+                        <div class="threeKey" onclick="display('3')">3</div>
+                        <div class="plusKey" onclick="display('+')">+</div>
+                    </div>
+                    <div class="row5">
+                        <div class="dotKey" onclick="display('.')">.</div>
+                        <div class="zeroKey" onclick="display('0')">0</div>
+                        <div class="doubleZeroKey" onclick="display('00')">00</div>
+                        <div class="equalKey" onclick="calculate()">=</div>
+                    </div>
+                   </div>
+                   
+                   <div class="copyright">
+                    <label for="">-Shiras VM-</label>
+                  </div>
+            </div>
+            <div class="historyFrame" hidden>
+                <div class="close">
+                    <p >no cont</p>
+                    <button id="clearBtn">Clear</button>
+                    <img src="close.png" alt="" class="closeBtn">
+                </div>
+                <div class="hist">
+                    <div class="history" id="history"  hidden>
+                        
+                        <label id="output">   </label>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+       
+    </div>
+   
+</body>
+<script src="script.js"></script>
+</html>
